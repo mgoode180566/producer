@@ -16,6 +16,8 @@ public class Employee {
 
     String location;
 
+    int age;
+
     public String getName() {
         return name;
     }
@@ -46,5 +48,13 @@ public class Employee {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
