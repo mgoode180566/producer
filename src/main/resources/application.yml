@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: employee-producer
+
+  datasource:
+      url: jdbc:h2:mem:employee-app;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      platform: h2
+      username: sa
+      password:
+      driver-class-name: org.h2.Driver
+
+  h2:
+      console:
+        enabled: true
+        path: /console
+
+  jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          show_sql: false
+          use_sql_comments: true
+          format_sql: true
+
+server:
+  port: 8091
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+
+
+  ribbon:
+    eureka:
+      enabled: true
+      listOfServers: localhost:9090,localhost:9091,localhost:9092
+      ServerListRefreshInterval: 15000
+
+
