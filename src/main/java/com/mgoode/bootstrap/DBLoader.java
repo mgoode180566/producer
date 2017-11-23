@@ -7,6 +7,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+
 import java.util.ArrayList;
 
 /**
@@ -20,7 +21,7 @@ public class DBLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments applicationArguments) throws Exception {
-        for ( int i = 0; i < 100; i++ ) {
+        for ( int i = 0; i < 50; i++ ) {
             Employee employee = new Employee();
             employee.setName("Fred");
             employee.setEmail("fred@sml.com");

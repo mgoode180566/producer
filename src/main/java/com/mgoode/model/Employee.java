@@ -1,16 +1,14 @@
 package com.mgoode.model;
 
 import io.swagger.annotations.ApiModelProperty;
-import org.springframework.context.annotation.Bean;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
 
 /**
  * Created by michaelgoode on 27/10/2017.
  */
+
+
 @Entity
 @Table(name="tbl_employee")
 public class Employee implements Serializable {

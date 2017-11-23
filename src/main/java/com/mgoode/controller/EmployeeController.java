@@ -4,7 +4,6 @@ import com.mgoode.model.Employee;
 import com.mgoode.service.IEmployeeService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
