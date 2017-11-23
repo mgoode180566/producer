@@ -8,7 +8,6 @@ import java.io.Serializable;
  * Created by michaelgoode on 27/10/2017.
  */
 
-
 @Entity
 @Table(name="tbl_employee")
 public class Employee implements Serializable {
