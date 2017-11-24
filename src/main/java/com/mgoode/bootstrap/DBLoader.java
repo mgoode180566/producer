@@ -23,7 +23,7 @@ public class DBLoader implements ApplicationRunner {
     public void run(ApplicationArguments applicationArguments) throws Exception {
         for ( int i = 0; i < 50; i++ ) {
             Employee employee = new Employee();
-            employee.setName("Fred");
+            employee.setName(String.format("Fred%d", i));
             employee.setEmail("fred@sml.com");
             employee.setLocation("UK");
             employee.setDept("IT");

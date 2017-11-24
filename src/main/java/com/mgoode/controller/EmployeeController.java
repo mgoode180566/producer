@@ -41,4 +41,18 @@ public class EmployeeController {
     public void deleteEmployee(@PathVariable Long id) {
         employeeService.deleteEmployee(id);
     }
+
+    @ApiOperation(value="Find an employee by name", response = Iterable.class, tags="Employee")
+    @RequestMapping(value = "/findemployee/{name}")
+    public Iterable<Employee> findEmployeeByName(@PathVariable String name) {
+        return employeeService.findEmployeeByName(name);
+    }
+
+    @ApiOperation(value="Employee count", response = Long.class, tags="Employee")
+    @RequestMapping(value = "/count")
+    public Long employeeCount() {
+        return employeeService.employeeCount();
+    }
+
+
 }

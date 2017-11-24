@@ -24,4 +24,12 @@ public class EmployeeService implements IEmployeeService {
         employeeRepository.delete(id);
     }
 
+    public Iterable<Employee> findEmployeeByName( String name ) {
+        return employeeRepository.findEmployeeByName(name);
+    }
+
+    public Long employeeCount(){
+        return employeeRepository.count();
+    }
+
 }

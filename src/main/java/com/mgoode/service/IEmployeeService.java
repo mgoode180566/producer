@@ -11,10 +11,9 @@ import java.util.List;
  */
 
 public interface IEmployeeService {
-
     public Iterable<Employee> list();
-
     public Employee findEmployeeByID( Long id );
-
     public void deleteEmployee( Long id );
+    public Iterable<Employee> findEmployeeByName( String name );
+    public Long employeeCount();
 }
